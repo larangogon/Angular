@@ -3,7 +3,7 @@
     Welcome to {{ title }}!
   </h1>
 
-  <input type="text" placeholder="Name"/>
+  <input type="text" placeholder="Name" [(ngModel)]="name" />
   <button (click)="addName(name)">Add Name</button>
 
   <ng-container *ngIf="names.length > 0; else elseTemplate">
