@@ -64,4 +64,9 @@ export class AppComponent {
     this.names.splice(index, 1);
   }
 
+  clickProduct(id: number) {
+    console.log('product');
+    console.log(id);
+  }
+
 }

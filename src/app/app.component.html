@@ -1,4 +1,7 @@
 <div>
+  <app-product [product]="products[0]">
+
+  </app-product>
   <div style="text-align:center">
     <input type="text" placeholder="Name" [(ngModel)]="name" *ngIf="name !=null"/>
 
@@ -12,7 +15,7 @@
 
   <div style="text-align:center">
     <h1>
-      Welcome to {{ title }}!
+      Welcome to {{ title }} practice!
     </h1>
 
     <input type="text" placeholder="Name" [(ngModel)]="name" />
@@ -32,9 +35,9 @@
 
 
     <div *ngFor="let product of products">
-      <h3>{{ product.title }}</h3>
-      <img [src]="product.image" alt="Product Image" width="200">
-      <p>{{ product.price }}</p>
+      <app-product (productClicked)="clickProduct($event)" [product]="product">
+
+      </app-product>
     </div>
 
   </div>
