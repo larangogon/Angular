@@ -11,6 +11,10 @@ export class AppComponent {
   names = [];
   name: string;
 
+  today = new Date();
+
+  power = 10;
+
   products: Product[] = [
     {
       id: '1',
@@ -56,14 +60,17 @@ export class AppComponent {
     }
   ];
 
+  // tslint:disable-next-line:typedef
   addName(name: string) {
     this.names.push(name);
   }
 
+  // tslint:disable-next-line:typedef
   deleteName(index: number) {
     this.names.splice(index, 1);
   }
 
+  // tslint:disable-next-line:typedef
   clickProduct(id: number) {
     console.log('product');
     console.log(id);
