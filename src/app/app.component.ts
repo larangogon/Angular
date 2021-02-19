@@ -11,6 +11,8 @@ export class AppComponent {
   names = [];
   name: string;
 
+  today = new Date();
+  
   products: Product[] = [
     {
       id: '1',

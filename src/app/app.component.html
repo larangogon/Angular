@@ -1,5 +1,6 @@
 <div>
   <div style="text-align:center">
+    <p>{{ today | date:'medium'}}</p>
     <input type="text" placeholder="Name" [(ngModel)]="name" *ngIf="name !=null"/>
 
     <div [ngSwitch]="name" *ngIf="name != null">
