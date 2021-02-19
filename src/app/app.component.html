@@ -1,8 +1,15 @@
 <div>
   <div style="text-align:center">
     <p>{{ today | date:'medium'}}</p>
-    <input type="text" placeholder="Name" [(ngModel)]="name" *ngIf="name !=null"/>
 
+    <p> exponente creando pipe</p>
+    <div>
+      <input type="text" [(ngModel)]="power">
+      {{ power | exponential }}
+    </div>
+
+    <p>Buscador de nombres</p>
+    <input type="text" placeholder="Name" [(ngModel)]="name"/>
     <div [ngSwitch]="name" *ngIf="name != null">
       <p *ngSwitchCase="'camiseta'">soy una camiseta</p>
       <p *ngSwitchCase="'example'">soy un ejemplo</p>

@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './components/product.component';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
+import { ExponentialPipe } from './exponential.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,
