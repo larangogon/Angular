@@ -30,12 +30,13 @@
       <p>Names array is empty</p>
     </ng-template>
 
-
-    <div *ngFor="let product of products">
-      <app-product (productClicked)="clickProduct($event)" [product]="product">
-
+    <div class="product-grid btn">
+      <app-product
+        *ngFor="let product of products"
+        (productClicked)="clickProduct($event)"
+        [product]="product">
       </app-product>
     </div>
-
   </div>
 </div>
+
